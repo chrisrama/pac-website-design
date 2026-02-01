@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#mission", label: "Our Mission" },
   { href: "#event", label: "Event Details" },
   { href: "#speaker", label: "Guest Speaker" },
+  { href: "/register", label: "Register" },
   { href: "#team", label: "Our Team" },
   { href: "/about", label: "About" },
 ]
