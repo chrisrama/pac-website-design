@@ -14,7 +14,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-bold mb-4">Event Details</h4>
-            <p className="text-white/80">April 3-4, 2025</p>
+            <p className="text-white/80">April 2-3, 2025</p>
             <p className="text-white/80">Wanamaker</p>
             <p className="text-white/80">Principia College</p>
           </div>

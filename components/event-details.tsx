@@ -20,7 +20,7 @@ export function EventDetails() {
                 </div>
                 <div>
                   <p className="text-sm text-[#788668] font-medium">Date</p>
-                  <p className="text-xl font-bold text-[#3D3D3D]">April 3-4, 2025</p>
+                  <p className="text-xl font-bold text-[#3D3D3D]">April 2-3, 2025</p>
                 </div>
               </CardContent>
             </Card>
