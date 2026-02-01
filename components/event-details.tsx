@@ -3,6 +3,7 @@ import { Calendar, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { getAssetPath } from "@/lib/utils"
+import { EVENT_SCHEDULE } from "@/lib/constants"
 
 export function EventDetails() {
   return (
@@ -52,6 +53,34 @@ export function EventDetails() {
                   <p className="text-sm text-[#788668] font-medium">Duration</p>
                   <p className="text-xl font-bold text-[#3D3D3D]">Two-Day Event</p>
                   <p className="text-[#5C5C5C]">Panels, stories, and discussions</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Schedule */}
+            <Card className="bg-white border-none shadow-lg">
+              <CardContent className="p-6">
+                <p className="text-sm text-[#788668] font-medium mb-4">Schedule</p>
+                <div className="space-y-3">
+                  {EVENT_SCHEDULE.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 py-2 border-b border-[#E5DED3] last:border-0"
+                    >
+                      <div className="font-medium text-[#3D3D3D]">{item.speaker}</div>
+                      <div className="flex items-center gap-2 text-[#5C5C5C] text-sm">
+                        <span>{item.day}</span>
+                        <span>·</span>
+                        <span>{item.time}</span>
+                        {item.role && (
+                          <>
+                            <span>·</span>
+                            <span className="text-[#788668] font-medium">{item.role}</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

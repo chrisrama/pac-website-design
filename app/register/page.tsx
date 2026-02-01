@@ -15,17 +15,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { Calendar, MapPin, Users, Heart } from "lucide-react"
+import { Calendar, MapPin, Users, Heart, Clock } from "lucide-react"
+import { EVENT_SCHEDULE } from "@/lib/constants"
 import { useState } from "react"
 
 const SESSION_OPTIONS = [
   { value: "full", label: "Full conference (both days)" },
-  { value: "keynote", label: "Keynote & opening sessions" },
-  { value: "blodgett", label: "Lauren Blodgett – Immigration & Human Rights" },
-  { value: "golash-boza", label: "Tanya Golash-Boza – Race & Immigration" },
-  { value: "vazquez-scolari", label: "Laurie Vázquez Scolari – Education & Equity" },
-  { value: "cantu", label: "Francisco Cantú – Border & Migration Stories" },
-  { value: "adeyemo", label: "Dr. Lola Adeyemo – Workplace Inclusion" },
+  { value: "cantu", label: "Thu 7:30 PM – Francisco Cantú (Opening Speaker)" },
+  { value: "golash-boza", label: "Fri 1:00 PM – Tanya Golash-Boza" },
+  { value: "vazquez-scolari", label: "Fri 2:20 PM – Laurie Vázquez Scolari" },
+  { value: "blodgett", label: "Fri 3:10 PM – Lauren Blodgett" },
+  { value: "adeyemo", label: "Fri 7:30 PM – Dr. Lola Adeyemo (Keynote Speaker)" },
   { value: "panels", label: "Panel discussions" },
   { value: "other", label: "Other / Not sure yet" },
 ]
@@ -66,10 +66,19 @@ export default function RegisterPage() {
               <p className="text-lg text-[#5c5c5c] mb-6">
                 We are thrilled to have you join us for Journeys of Hope. A confirmation email has been sent to your inbox with all the event details.
               </p>
-              <div className="bg-[#F8F4EC] rounded-xl p-6 mb-8">
+              <div className="bg-[#F8F4EC] rounded-xl p-6 mb-8 text-left">
                 <h3 className="font-semibold text-[#788668] mb-3">Event Details</h3>
-                <p className="text-[#3D3D3D]">April 2-3, 2025</p>
+                <p className="text-[#3D3D3D] font-medium">April 2-3, 2025</p>
                 <p className="text-[#3D3D3D]">Wannamaker Hall, Principia College</p>
+                <div className="mt-4 pt-4 border-t border-[#E5DED3]">
+                  <p className="text-sm font-medium text-[#788668] mb-2">Schedule</p>
+                  {EVENT_SCHEDULE.map((item, index) => (
+                    <p key={index} className="text-sm text-[#3D3D3D]">
+                      {item.day} {item.time} — {item.speaker}
+                      {item.role ? ` (${item.role})` : ""}
+                    </p>
+                  ))}
+                </div>
               </div>
               <Button
                 asChild
@@ -116,6 +125,42 @@ export default function RegisterPage() {
               <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-[#E5DED3]">
                 <Users className="w-5 h-5 text-[#D9A87E]" />
                 <span className="text-[#3D3D3D] font-medium">Free Admission</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Schedule */}
+        <section className="py-8 md:py-12">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E5DED3]">
+              <h2 className="text-2xl font-bold text-[#3D3D3D] mb-2 flex items-center gap-2">
+                <Clock className="w-6 h-6 text-[#788668]" />
+                Event Schedule
+              </h2>
+              <p className="text-[#5c5c5c] mb-6">
+                Join us across two days of powerful conversations.
+              </p>
+              <div className="space-y-3">
+                {EVENT_SCHEDULE.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 py-3 border-b border-[#E5DED3] last:border-0"
+                  >
+                    <div className="font-medium text-[#3D3D3D]">{item.speaker}</div>
+                    <div className="flex items-center gap-2 text-[#5C5C5C] text-sm">
+                      <span>{item.day}</span>
+                      <span>·</span>
+                      <span>{item.time}</span>
+                      {item.role && (
+                        <>
+                          <span>·</span>
+                          <span className="text-[#788668] font-medium">{item.role}</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

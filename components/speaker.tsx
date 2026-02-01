@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Award, Mic, Scale, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
+import { Award, Mic, Scale, ChevronLeft, ChevronRight, ExternalLink, Clock } from "lucide-react"
 import { useState } from "react"
 import { getAssetPath } from "@/lib/utils"
 
@@ -23,6 +23,8 @@ const speakers = [
       "Human Rights & Immigration Attorney",
     ],
     featuredBadge: "Forbes 30 Under 30",
+    sessionTime: "Friday, April 3 · 3:10–4:20 PM",
+    sessionRole: null,
   },
   {
     name: "Tanya Golash-Boza",
@@ -42,6 +44,8 @@ const speakers = [
     ],
     featuredBadge: "TED Speaker",
     tedTalkUrl: "https://youtu.be/eakUZX-pRCQ?si=eRLWYv4NZHm1kAKg",
+    sessionTime: "Friday, April 3 · 1:00–2:00 PM",
+    sessionRole: null,
   },
   {
     name: "Laurie Vázquez Scolari",
@@ -60,6 +64,8 @@ const speakers = [
       "Contributor to state- and city-level equity efforts, including SF's Our Children, Our Families Council and California's Recovery with Equity initiative",
     ],
     featuredBadge: "Equity Strategist",
+    sessionTime: "Friday, April 3 · 2:20–3:10 PM",
+    sessionRole: null,
   },
   {
     name: "Francisco Cantú",
@@ -78,6 +84,8 @@ const speakers = [
       "Co-coordinator of Field Studies in Writing Program and the DETAINED archive at University of Arizona",
     ],
     featuredBadge: "NYT Bestseller",
+    sessionTime: "Thursday, April 2 · 7:30–8:30 PM",
+    sessionRole: "Opening Speaker",
   },
   {
     name: "Dr. Lola Adeyemo",
@@ -97,6 +105,8 @@ const speakers = [
     ],
     featuredBadge: "TEDx Speaker",
     tedTalkUrl: "https://youtu.be/abfhtWPOya4?si=M9C-7ae8Bk10jM43",
+    sessionTime: "Friday, April 3 · 7:30–8:30 PM",
+    sessionRole: "Keynote Speaker",
   },
 ]
 
@@ -179,6 +189,16 @@ export function Speaker() {
               <h3 className="text-3xl md:text-4xl font-bold text-[#3D3D3D]">{speaker.name}</h3>
 
               <p className="text-xl text-[#788668] font-medium">{speaker.title}</p>
+
+              {"sessionTime" in speaker && speaker.sessionTime && (
+                <div className="flex items-center gap-2 text-[#788668] font-medium">
+                  <Clock className="w-5 h-5" />
+                  <span>
+                    {speaker.sessionTime}
+                    {"sessionRole" in speaker && speaker.sessionRole && ` · ${speaker.sessionRole}`}
+                  </span>
+                </div>
+              )}
 
               <p className="text-lg text-[#5C5C5C] leading-relaxed">{speaker.bio}</p>
 

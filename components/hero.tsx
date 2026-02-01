@@ -20,7 +20,7 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-block mb-6 px-4 py-2 bg-[#F2D497]/60 rounded-full">
           <span className="text-[#788668] font-medium text-sm md:text-base">
-            April 3-4, 2025 • Wanamaker, Principia College
+            April 2-3, 2025 • Wannamaker, Principia College
           </span>
         </div>
 
