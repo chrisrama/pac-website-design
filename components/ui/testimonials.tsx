@@ -78,7 +78,7 @@ export function TestimonialSection({
                   <img
                     src={testimonial.imageSrc}
                     alt={testimonial.name}
-                    className="h-80 w-full object-cover object-top"
+                    className="h-96 w-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
                 </div>
