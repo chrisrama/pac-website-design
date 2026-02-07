@@ -19,7 +19,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#F8F4EC] via-transparent to-transparent h-full" style={{ top: "80%" }} />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center min-h-[calc(100vh-5rem)]">
           {/* Spacer for left side (image shows through) */}
           <div className="hidden md:block md:w-1/2" />
