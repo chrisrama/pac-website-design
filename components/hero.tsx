@@ -1,54 +1,67 @@
 import { Button } from "@/components/ui/button"
-import { ArrowDown, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 import { getAssetPath } from "@/lib/utils"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-end pt-20 overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url('${getAssetPath('/diverse-hands-holding-together-unity-warmth-golden.jpg')}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4EC]/50 via-[#F8F4EC]/30 to-transparent" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Full background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={getAssetPath("/diverse-hands-holding-together-unity-warmth-golden.jpg")}
+          alt="Diverse community coming together in unity"
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient overlay: transparent on left for image, darkens toward right for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3D3D3D]/30 via-[#3D3D3D]/50 to-[#3D3D3D]/85 md:from-[#3D3D3D]/10 md:via-[#3D3D3D]/40 md:to-[#3D3D3D]/90" />
+        {/* Bottom gradient for smooth transition */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F8F4EC] via-transparent to-transparent h-full" style={{ top: "80%" }} />
       </div>
 
-      {/* Hero Text Overlay (Right Side) */}
-      <div className="relative z-10 max-w-xl mx-auto lg:mx-0 lg:mr-12 xl:mr-20 px-4 sm:px-6 lg:px-8 text-center lg:text-right">
-        <p className="text-sm md:text-base text-[#788668] font-medium mb-4 tracking-wide">
-          America&apos;s Oldest Student-Led Conference • Est. 1939
-        </p>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center min-h-[calc(100vh-5rem)]">
+          {/* Spacer for left side (image shows through) */}
+          <div className="hidden md:block md:w-1/2" />
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#3D3D3D] mb-6 leading-tight text-balance">
-          Journeys of Hope
-        </h1>
+          {/* Right side text overlay */}
+          <div className="w-full md:w-1/2 md:pl-8 lg:pl-12">
+            {/* Eyebrow text */}
+            <p className="text-[#F2D497] font-medium text-sm md:text-base tracking-wide uppercase mb-6">
+              {"America's Oldest Student-Led Conference"} &bull; Est. 1939
+            </p>
 
-        <p className="text-lg md:text-xl text-[#5C5C5C] mb-8 leading-relaxed text-pretty">
-          Five voices. Two days. One urgent question: What does it mean to search for home in America?
-        </p>
+            {/* Main Headline */}
+            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Journeys of Hope
+            </h1>
 
-        <p className="text-[#788668] font-medium text-sm md:text-base mb-10">
-          April 2–3, 2025 Principia College • Free Admission
-        </p>
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl text-[#F8F4EC]/90 max-w-lg mb-8 leading-relaxed text-pretty">
+              Five voices. Two days. One urgent question: What does it mean to search for home in America?
+            </p>
 
-        <div className="flex justify-center lg:justify-end">
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#788668] hover:bg-[#6a7659] text-white px-8 py-6 text-lg rounded-full inline-flex items-center gap-2"
-          >
-            <a href="/register">
-              Register Now <ArrowRight className="w-5 h-5" />
-            </a>
-          </Button>
-        </div>
+            {/* Date / Location info */}
+            <div className="flex items-center gap-3 mb-10">
+              <div className="w-1 h-12 bg-[#D9A87E] rounded-full" />
+              <div>
+                <p className="text-white font-semibold text-base md:text-lg">April 2 &ndash; 3, 2025</p>
+                <p className="text-[#F8F4EC]/70 text-sm md:text-base">Principia College &bull; Free Admission</p>
+              </div>
+            </div>
 
-        <div className="mt-16 animate-bounce flex justify-center lg:justify-end">
-          <ArrowDown className="w-8 h-8 text-[#788668]" />
+            {/* CTA Button */}
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#D9A87E] hover:bg-[#c9956b] text-white px-8 py-6 text-lg rounded-full gap-2 group"
+            >
+              <Link href="/register">
+                Register Now
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
