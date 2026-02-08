@@ -60,7 +60,7 @@ export function EventDetails() {
 
           <div className="relative h-[400px] lg:min-h-[420px] rounded-3xl overflow-hidden">
             <img
-              src={getAssetPath("/college-campus-building-warm-sunlight-community-ga.jpg")}
+              src={getAssetPath("211203_MarlainaMarthisen_BK-41.jpg")}
               alt="Wannamaker building at Principia College"
               className="w-full h-full object-cover"
             />
