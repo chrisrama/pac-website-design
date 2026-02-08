@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getAssetPath } from "@/lib/utils"
 
 const navLinks = [
   { href: "#mission", label: "Our Mission" },
@@ -35,7 +36,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/PublicAffairsConference-2.png"
+              src={getAssetPath("/PublicAffairsConference-2.png")}
               alt="Principia College"
               width={80}
               height={80}

@@ -1,6 +1,7 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
+import { getAssetPath } from "@/lib/utils";
 
 import {
   Carousel,
@@ -26,52 +27,29 @@ const Logos3 = ({
   logos = [
     {
       id: "logo-1",
-      description: "Logo 1",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/astro-wordmark.svg",
+      description: "80 Years of thoughtful conversation",
+      image: getAssetPath("/Pacnumbers/1.png"),
       className: "h-7 w-auto",
     },
     {
       id: "logo-2",
-      description: "Logo 2",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/figma-wordmark.svg",
+      description: "250+ Students",
+      image: getAssetPath("/Pacnumbers/2.png"),
       className: "h-7 w-auto",
     },
     {
       id: "logo-3",
-      description: "Logo 3",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/nextjs-wordmark.svg",
+      description: "5000+ Attendees",
+      image: getAssetPath("/Pacnumbers/3.png"),
       className: "h-7 w-auto",
     },
     {
       id: "logo-4",
-      description: "Logo 4",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/react-wordmark.svg",
+      description: "100% Student-Led",
+      image: getAssetPath("/Pacnumbers/4.png"),
       className: "h-7 w-auto",
     },
-    {
-      id: "logo-5",
-      description: "Logo 5",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcn-ui-wordmark.svg",
-      className: "h-7 w-auto",
-    },
-    {
-      id: "logo-6",
-      description: "Logo 6",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/supabase-wordmark.svg",
-      className: "h-7 w-auto",
-    },
-    {
-      id: "logo-7",
-      description: "Logo 7",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/tailwind-wordmark.svg",
-      className: "h-4 w-auto",
-    },
-    {
-      id: "logo-8",
-      description: "Logo 8",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/vercel-wordmark.svg",
-      className: "h-7 w-auto",
-    },
+    
   ],
 }: Logos3Props) => {
   return (

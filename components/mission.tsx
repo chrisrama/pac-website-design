@@ -19,7 +19,7 @@ export function Mission() {
             <Link href="/register">Register Now</Link>
           </Button>
         </div>
-        <Logos3 heading="PAC BY THE NUMBERS SECTION" />
+        <Logos3 heading="PAC by the numbers" />
       </div>
     </section>
   )
