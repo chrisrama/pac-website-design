@@ -46,8 +46,8 @@ const Logos3 = ({
     },
     {
       id: "logo-4",
-      description: "5000+ attendees",
-      image: getAssetPath("/4.png"),
+      description: "Principia College",
+      image: getAssetPath("/6.png"),
       className: "h-20 w-auto",
     },
     {
@@ -58,8 +58,8 @@ const Logos3 = ({
     },
     {
       id: "logo-6",
-      description: "Principia College",
-      image: getAssetPath("/6.png"),
+      description: "5000+ attendees",
+      image: getAssetPath("/4.png"),
       className: "h-20 w-auto",
     },
 

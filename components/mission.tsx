@@ -11,7 +11,7 @@ export function Mission() {
             Journeys of Hope: Understanding Immigration
           </h2>
           <p className="text-lg md:text-xl text-[#5C5C5C] leading-relaxed text-pretty mb-8">
-            Join America&apos;s oldest student-led conference. For over 75 years, Principia&apos;s Public Affairs
+            For over 75 years, Principia&apos;s Public Affairs
             Conference has convened leading voices on the most urgent issues of our time. This year, we examine
             immigration through the lens of humanity, hope, and the search for home.
           </p>
@@ -20,7 +20,7 @@ export function Mission() {
           </Button>
         </div>
         <Logos3/>
-        
+
       </div>
     </section>
   )
