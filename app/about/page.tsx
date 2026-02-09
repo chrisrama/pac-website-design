@@ -1,8 +1,15 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import AboutUsSection from "@/components/ui/about-us-section"
-import { Globe, Users } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { BookOpen, Globe, Users, Mic2 } from "lucide-react"
 import Image from "next/image"
+
+const pastPACspeakers = [
+  "Vincent Stanley (Author of The Responsible Company)",
+  "David Miller (former president of World Wildlife Fund Canada)",
+  "Shiza Shahid (founder of The Malala Fund)",
+]
 
 const pastPrincipiaSpeakers = [
   "Doris Kearns Goodwin",
@@ -36,7 +43,7 @@ export default function AboutPage() {
             <div className="order-2 md:order-1 relative">
               <div className="absolute -inset-4 bg-[#788668]/10 rounded-3xl transform -rotate-3"></div>
               <Image
-                src="100505_C_ArtistOnBluffs_0022.jpg"
+                src="https://content.principia.edu/sites/pac2025/files/2023/01/Capture-de%CC%81cran-2023-01-18-a%CC%80-13.03.01-1024x791.png"
                 alt="Principia College campus overlooking Mississippi River"
                 width={500}
                 height={400}

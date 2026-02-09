@@ -19,7 +19,6 @@ import { motion, useScroll, useTransform, useInView, useSpring } from "framer-mo
 import { getAssetPath } from "@/lib/utils"
 
 export default function AboutUsSection() {
-  const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
@@ -35,10 +34,6 @@ export default function AboutUsSection() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 50])
   const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 20])
   const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -20])
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -175,7 +170,7 @@ export default function AboutUsSection() {
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
                 <img
-                  src={getAssetPath("/PrincipiaCollegeDrone.png")}
+                  src={getAssetPath("/100505_C_ArtistOnBluffs_0022.jpg")}
                   alt="Principia College campus overlooking Mississippi River"
                   className="w-full h-full object-cover"
                 />
@@ -185,7 +180,7 @@ export default function AboutUsSection() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
                 >
-                  <Link href="#principia">
+                  <Link href="/about/#principia">
                     <motion.span
                       className="inline-flex items-center gap-2 bg-white text-[#3D3D3D] px-4 py-2 rounded-full text-sm font-medium cursor-pointer"
                       whileHover={{ scale: 1.05 }}
