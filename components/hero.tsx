@@ -19,7 +19,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#F8F4EC] via-transparent to-transparent h-full" style={{ top: "80%" }} />
       </div>
 
-      <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-8 pr-4 md:pr-6 lg:pr-8">
+      <div className="relative z-10 w-full pl-4 sm:pl-6 lg:pl-8 pr-4 md:pr-6 lg:pr-8" style={{ top: '-20px', position: 'relative' }}>
         <div className="flex items-center justify-start min-h-[calc(100vh-5rem)]">
           {/* Text block on the left */}
           <div className="w-full max-w-xl md:max-w-2xl mr-0 md:mr-auto flex flex-col md:items-start md:text-left">
