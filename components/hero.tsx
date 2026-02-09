@@ -43,9 +43,7 @@ export function Hero() {
             <p className="text-lg md:text-xl text-[#F8F4EC]/90 max-w-lg mb-8 leading-relaxed text-pretty">
               Five speakers. Two days. One urgent question: What does it mean to search for home in America?
             </p>
-            <p className="text-lg md:text-xl text-[#F8F4EC]/90 max-w-lg mb-8 leading-relaxed text-pretty">
-              Why is immigration so important to our nation?
-            </p>
+            
 
             {/* Date / Location info */}
             <div className="flex items-center gap-3 mb-10">
