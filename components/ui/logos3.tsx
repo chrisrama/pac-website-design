@@ -23,42 +23,38 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-  heading = "Trusted by these companies",
+  heading = "",
   logos = [
     {
       id: "logo-1",
       description: "80 Years of thoughtful conversation",
       image: getAssetPath("/1.png"),
-      className: "h-7 w-auto",
+    
+      className: "h-12 w-auto",
     },
     {
       id: "logo-2",
       description: "250+ Students",
       image: getAssetPath("/2.png"),
-      className: "h-7 w-auto",
+      className: "h-12 w-auto",
     },
     {
       id: "logo-3",
       description: "5000+ Attendees",
       image: getAssetPath("/3.png"),
-      className: "h-7 w-auto",
+      className: "h-12 w-auto",
     },
     {
       id: "logo-4",
       description: "100% Student-Led",
       image: getAssetPath("/4.png"),
-      className: "h-7 w-auto",
+      className: "h-12 w-auto",
     },
     
   ],
 }: Logos3Props) => {
   return (
     <section className="py-12 md:py-16">
-      <div className="container flex flex-col items-center text-center">
-        <h2 className="mb-6 text-2xl font-bold text-pretty lg:text-4xl text-[#3D3D3D]">
-          {heading}
-        </h2>
-      </div>
       <div className="pt-6 md:pt-8">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
           <Carousel
