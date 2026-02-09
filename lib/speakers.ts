@@ -12,7 +12,7 @@ export const speakers: Speaker[] = [
   {
     slug: "francisco-cantu",
     name: "Francisco Cantú",
-    image: "/SpeakersHeadshots/2148466-3.jpeg",
+    image: "/SpeakersHeadshots/Francisco.png",
     sessionTime: "Thursday, April 2 • 7:30–8:30 PM",
     sessionRole: null,
     shortBio:
@@ -23,7 +23,7 @@ export const speakers: Speaker[] = [
   {
     slug: "tanya-golash-boza",
     name: "Dr. Tanya Golash-Boza",
-    image: "/SpeakersHeadshots/Golash-Boza.jpg",
+    image: "/SpeakersHeadshots/Tanya.png",
     sessionTime: "Friday, April 3 • 1:00–2:00 PM",
     sessionRole: null,
     shortBio:
@@ -34,7 +34,7 @@ export const speakers: Speaker[] = [
   {
     slug: "laurie-vazquez-scolari",
     name: "Laurie Vázquez Scolari",
-    image: "/SpeakersHeadshots/LaurieScolari.jpg",
+    image: "/SpeakersHeadshots/Laurie.png",
     sessionTime: "Friday, April 3 • 2:20–3:10 PM",
     sessionRole: null,
     shortBio:
@@ -45,7 +45,7 @@ export const speakers: Speaker[] = [
   {
     slug: "lauren-blodgett",
     name: "Lauren Blodgett",
-    image: "/SpeakersHeadshots/1620529482973.jpeg",
+    image: "/SpeakersHeadshots/Lauren.png",
     sessionTime: "Friday, April 3 • 3:10–4:20 PM",
     sessionRole: null,
     shortBio:
@@ -56,7 +56,7 @@ export const speakers: Speaker[] = [
   {
     slug: "lola-adeyemo",
     name: "Dr. Lola Adeyemo",
-    image: "/SpeakersHeadshots/1735697581947.jpeg",
+    image: "/SpeakersHeadshots/Lola.png",
     sessionTime: "Friday, April 3 • 7:30–8:30 PM",
     sessionRole: "Keynote Speaker",
     shortBio:
