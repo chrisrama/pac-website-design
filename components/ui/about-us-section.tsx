@@ -180,7 +180,7 @@ export default function AboutUsSection() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
                 >
-                  <Link href="/about/#principia">
+                  <Link href="https://explore.principiacollege.edu/">
                     <motion.span
                       className="inline-flex items-center gap-2 bg-white text-[#3D3D3D] px-4 py-2 rounded-full text-sm font-medium cursor-pointer"
                       whileHover={{ scale: 1.05 }}
