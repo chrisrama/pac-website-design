@@ -30,7 +30,7 @@ const Logos3 = ({
       description: "80 Years of thoughtful conversation",
       image: getAssetPath("/1.png"),
     
-      className: "h-30 w-auto",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-2",
