@@ -30,25 +30,25 @@ const Logos3 = ({
       description: "80 Years of thoughtful conversation",
       image: getAssetPath("/1.png"),
     
-      className: "h-30 w-auto",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-2",
       description: "250+ Students",
       image: getAssetPath("/2.png"),
-      className: "h-30 w-auto",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-3",
       description: "5000+ Attendees",
       image: getAssetPath("/3.png"),
-      className: "h-30 w-auto",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-4",
       description: "100% Student-Led",
       image: getAssetPath("/4.png"),
-      className: "h-30 w-auto",
+      className: "h-20 w-auto",
     },
     
   ],
