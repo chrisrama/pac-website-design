@@ -69,7 +69,7 @@ export default function RegisterPage() {
               <div className="bg-[#F8F4EC] rounded-xl p-6 mb-8 text-left">
                 <h3 className="font-semibold text-[#788668] mb-3">Event Details</h3>
                 <p className="text-[#3D3D3D] font-medium">April 2-3, 2025</p>
-                <p className="text-[#3D3D3D]">Wannamaker Hall, Principia College</p>
+                <p className="text-[#3D3D3D]">Wanamaker Hall, Principia College</p>
                 <div className="mt-4 pt-4 border-t border-[#E5DED3]">
                   <p className="text-sm font-medium text-[#788668] mb-2">Schedule</p>
                   {EVENT_SCHEDULE.map((item, index) => (
