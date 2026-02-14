@@ -50,7 +50,7 @@ export const teamMembers: TeamMember[] = [
     majors: "Global Studies, Education",
     hometown: "Toronto, Canada",
     image: "https://prinweb.principia.edu/phone/new_faces_pictures/_Replacement_Files/20240828193359750991me.jpeg",
-    bio: "PAC is important to me because.",
+    bio: "I joined PAC because when I heard the topic I knew this was something that not only interested me but was something so necessary to talk about. Change and growth comes with action so when I got the opportunity to be a changemaker in this way I was more than eager to join this year’s PAC.",
   },
   {
     name: "Julian Hawke",
